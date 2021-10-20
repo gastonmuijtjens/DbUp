@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Data.SqlClient;
 using DbUp.Helpers;
+using Microsoft.Data.SqlClient;
 
 namespace DbUp.SqlServer.Helpers
 {
@@ -45,7 +45,7 @@ namespace DbUp.SqlServer.Helpers
             databaseName = builder.InitialCatalog;
             ConnectionString = builder.ConnectionString;
             sqlConnection = new SqlConnection(ConnectionString);
-            AdHoc = new AdHocSqlRunner(sqlConnection.CreateCommand, new SqlServer.SqlServerObjectParser(), "dbo", () => true);
+            AdHoc = new AdHocSqlRunner(sqlConnection.CreateCommand, new SqlServerObjectParser(), "dbo", () => true);
 
             // set the master database information
             builder.InitialCatalog = "master";

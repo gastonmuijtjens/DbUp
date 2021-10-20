@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Data.SqlClient;
+﻿using System;
+using System.Collections.Generic;
 using DbUp.Engine.Transactions;
 using DbUp.Support;
+using Microsoft.Data.SqlClient;
 
 namespace DbUp.SqlServer
 {
